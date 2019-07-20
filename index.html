@@ -2,9 +2,98 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
+		<link rel="stylesheet" href="css/main.css">
+		<script src="js/jquery.min.js"></script>
+		<script>
+			function environment_onclick() {
+				$(environment).show();
+				$(course).hide();
+				$(address).hide();
+				$(staff).hide();
+
+			}
+
+			function course_onclick() {
+				$(environment).hide();
+				$(course).show();
+				$(address).hide();
+				$(staff).hide();
+			}
+
+			function address_onclick() {
+				$(environment).hide();
+				$(course).hide();
+				$(address).show();
+				$(staff).hide();
+			}
+
+			function staff_onclick() {
+				$(environment).hide();
+				$(course).hide();
+				$(address).hide();
+				$(staff).show();
+			}
+		</script>
+		<title>成成画室</title>
 	</head>
 	<body>
-		
+		<div id="container" style="width: 100%; text-align: center">
+			<div class="content" style="width: 400pt; margin: 0; display: inline-block;">
+				<img class="banner" src=" img/banner0.jpg" style="width: 100%; display: block;"/>
+				<div class="navbar">
+					<img src="img/banner0.jpg" id="environment_tag" onclick="environment_onclick()" style="width: 25%;" /><img src="img/banner0.jpg"
+					 id="course_tag" onclick="course_onclick()" style="width: 25%;"><img src="img/banner0.jpg" id="address_tag"
+					 onclick="address_onclick()" style="width: 25%;"><img src="img/banner0.jpg" id="staff_tag" onclick="staff_onclick()"
+					 style="width: 25%;">
+				</div>
+				<div class="article" id="environment">
+					<div class="text">
+						随便写点啥
+					</div>
+					<div class="image">
+						<img src="img/banner0.jpg" style="max-width: 100%;">
+					</div>
+					<div class="text">
+						随便写点啥
+					</div>
+				</div>
+				<div class="article" id="course" style="display:none;">
+					<div class="text">
+						随便写点啥2
+					</div>
+					<div class="image">
+						<img src="img/banner0.jpg" style="max-width: 100%;">
+					</div>
+					<div class="text">
+						随便写点啥2
+					</div>
+				</div>
+				<div class="article" id="address" style="display:none;">
+					<div class="text">
+						随便写点啥3
+					</div>
+					<div class="image">
+						<img src="img/banner0.jpg" style="max-width: 100%;">
+					</div>
+					<div class="text">
+						随便写点啥3
+					</div>
+				</div>
+				<div class="article" id="staff" style="display:none;">
+					<div class="text">
+						随便写点啥4
+					</div>
+					<div class="image">
+						<img src="img/banner0.jpg" style="max-width: 100%;">
+					</div>
+					<div class="text">
+						随便写点啥4
+					</div>
+				</div>
+			</div>
+
+		</div>
+
 	</body>
+
 </html>
