@@ -2,23 +2,26 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="css/main.css">
-		<script src="js/jquery.min.js"></script>
+		<!-- <link rel="stylesheet" href="css/main.css"> -->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<!-- <script src="js/jquery.min.js"></script> -->
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 		<script>
 			function environment_onclick() {
-				
+
 				$(index).hide();
 				$(environment).show();
 				$(course).hide();
 				$(address).hide();
 				$(staff).hide();
 				$(button_back_to_index).show();
-				
+
 				$(environment_tag).hide();
 				$(course_tag).show();
 				$(address_tag).show();
 				$(staff_tag).show();
-				
+
 				$(environment_tag_chosen).show();
 				$(course_tag_chosen).hide();
 				$(address_tag_chosen).hide();
@@ -32,12 +35,12 @@
 				$(address).hide();
 				$(staff).hide();
 				$(button_back_to_index).show();
-				
+
 				$(environment_tag).show();
 				$(course_tag).hide();
 				$(address_tag).show();
 				$(staff_tag).show();
-				
+
 				$(environment_tag_chosen).hide();
 				$(course_tag_chosen).show();
 				$(address_tag_chosen).hide();
@@ -51,12 +54,12 @@
 				$(address).show();
 				$(staff).hide();
 				$(button_back_to_index).show();
-				
+
 				$(environment_tag).show();
 				$(course_tag).show();
 				$(address_tag).hide();
 				$(staff_tag).show();
-				
+
 				$(environment_tag_chosen).hide();
 				$(course_tag_chosen).hide();
 				$(address_tag_chosen).show();
@@ -70,12 +73,12 @@
 				$(address).hide();
 				$(staff).show();
 				$(button_back_to_index).show();
-				
+
 				$(environment_tag).show();
 				$(course_tag).show();
 				$(address_tag).show();
 				$(staff_tag).hide();
-				
+
 				$(environment_tag_chosen).hide();
 				$(course_tag_chosen).hide();
 				$(address_tag_chosen).hide();
@@ -89,18 +92,18 @@
 				$(address).hide();
 				$(staff).hide();
 				$(button_back_to_index).hide();
-				
+
 				$(environment_tag).show();
 				$(course_tag).show();
 				$(address_tag).show();
 				$(staff_tag).show();
-				
+
 				$(environment_tag_chosen).hide();
 				$(course_tag_chosen).hide();
 				$(address_tag_chosen).hide();
 				$(staff_tag_chosen).hide();
-				
-				
+
+
 			}
 		</script>
 		<title>成成画室</title>
@@ -110,15 +113,47 @@
 			<div id="container" style=" height: 100%; width: 100%; text-align: center; background: url('./img/background.jpg'); background-repeat: repeat; display: inline-block;">
 				<div class="content" style=" margin: 0; display: inline-block; width: 100%;">
 					<!-- banner -->
-					<img class="banner" src="img/首页/首页_02.png" style="width: 100%; display: block; " />
+					<!-- <img class="banner" src="img/首页/首页_02.png" style="width: 100%; display: block; " /> -->
+					<div id="banner" class="carousel slide" data-ride="carousel" style="width: 100%;">
+
+						<!-- 指示符 -->
+						<ul class="carousel-indicators">
+							<li data-target="#banner" data-slide-to="0" class="active"></li>
+							<li data-target="#banner" data-slide-to="1"></li>
+							<li data-target="#banner" data-slide-to="2"></li>
+						</ul>
+
+						<!-- 轮播图片 -->
+						<div class="carousel-inner" style="width: 100%;">
+							<div class="carousel-item active" style="width: 100%;">
+								<img src="img/common/banner0.png" style="width: 100%;">
+							</div>
+							<div class="carousel-item" style="width: 100%;">
+								<img src="img/common/banner1.jpg" style="width: 100%;">
+							</div>
+							<div class="carousel-item" style="width: 100%;">
+								<img src="img/common/banner2.jpg" style="width: 100%;">
+							</div>
+						</div>
+
+						<!-- 左右切换按钮 -->
+						<a class="carousel-control-prev" href="#banner" data-slide="prev">
+							<span class="carousel-control-prev-icon"></span>
+						</a>
+						<a class="carousel-control-next" href="#banner" data-slide="next">
+							<span class="carousel-control-next-icon"></span>
+						</a>
+
+					</div>
 					<!-- navbar -->
 					<div class="navbar" style="width: 100%;">
-						<img src="img/首页/按钮未选中_02.png" id="environment_tag" onclick="environment_onclick()" style="width: 25%;" /><img src="img/首页/按钮选中_02.png"
-						 id="environment_tag_chosen" style="width: 25%; display: none;" /><img src="img/首页/按钮未选中_03.png" id="course_tag"
-						 onclick="course_onclick()" style="width: 25%;"><img src="img/首页/按钮选中_03.png" id="course_tag_chosen" style="width: 25%; display: none;" /><img
-						 src="img/首页/按钮未选中_04.png" id="address_tag" onclick="address_onclick()" style="width: 25%;"><img src="img/首页/按钮选中_04.png"
-						 id="address_tag_chosen" style="width: 25%; display: none;" /><img src="img/首页/按钮未选中_05.png" id="staff_tag"
-						 onclick="staff_onclick()" style="width: 25%;"><img src="img/首页/按钮选中_05.png" id="staff_tag_chosen" style="width: 25%; display: none;" />
+						<img src="img/首页/按钮未选中_02.png" id="environment_tag" onclick="environment_onclick()" style="width: 25%;" /><img
+						 src="img/首页/按钮选中_02.png" id="environment_tag_chosen" style="width: 25%; display: none;" /><img src="img/首页/按钮未选中_03.png"
+						 id="course_tag" onclick="course_onclick()" style="width: 25%;"><img src="img/首页/按钮选中_03.png" id="course_tag_chosen"
+						 style="width: 25%; display: none;" /><img src="img/首页/按钮未选中_04.png" id="address_tag" onclick="address_onclick()"
+						 style="width: 25%;"><img src="img/首页/按钮选中_04.png" id="address_tag_chosen" style="width: 25%; display: none;" /><img
+						 src="img/首页/按钮未选中_05.png" id="staff_tag" onclick="staff_onclick()" style="width: 25%;"><img src="img/首页/按钮选中_05.png"
+						 id="staff_tag_chosen" style="width: 25%; display: none;" />
 					</div>
 					<!-- 正文 -->
 					<div class="article" id="index">
@@ -135,7 +170,7 @@
 						<img src="img/环境作品/环境作品_16.jpg" style="width: 94.4%; padding: 1.33%;">
 						<img src="img/环境作品/环境作品_18.jpg" style="width: 34.53%; padding: 1.33%;"><img src="img/环境作品/环境作品_20.jpg" style="width: 57.07%; padding: 1.33%;">
 						<img src="img/环境作品/环境作品_23.jpg" style="width: 94.4%; padding: 1.33%;">
-						<img src="img/环境作品/环境作品_25.png" style="width: 100%;" >
+						<img src="img/环境作品/环境作品_25.png" style="width: 100%;">
 						<!-- 作品 end-->
 					</div>
 					<div class="article" id="course" style="display:none;">
@@ -167,10 +202,10 @@
 					</div>
 				</div>
 				<img id="button_back_to_index" onclick="button_back_to_index_onclick()" src="img/back_to_index.png" style="width: 100%; display: none;">
-				
+
 			</div>
 		</div>
-		
+
 
 	</body>
 
